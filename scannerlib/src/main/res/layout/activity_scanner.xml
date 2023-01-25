@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScannerActivity">
+
+    <SurfaceView
+        android:id="@+id/surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="100dp"
+        />
+
+    <TextView
+        android:id="@+id/barcode_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:layout_constraintTop_toBottomOf="@id/surface_view"
+        android:layout_marginTop="50dp"
+        android:text="Barcode Text"
+        android:textSize="25sp"
+        android:padding="5dp"/>
+
+
+
+
+     <TextView
+         android:id="@+id/flash"
+         android:layout_width="30dp"
+         android:layout_height="30dp"
+         android:textColor="@color/white"
+         android:layout_marginEnd="10dp"
+         android:layout_marginTop="15dp"
+         android:elevation="20dp"
+
+         android:background="@drawable/light_torch"
+         app:layout_constraintEnd_toEndOf="@id/surface_view"
+         app:layout_constraintTop_toTopOf="@id/surface_view"
+         android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@id/flash"
+        app:layout_constraintEnd_toEndOf="@id/flash"
+        app:layout_constraintTop_toTopOf="@id/flash"
+        android:layout_marginBottom="-10dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginStart="-5dp"
+        android:layout_marginEnd="-5dp"
+        app:layout_constraintBottom_toBottomOf="@id/flash"
+        android:background="@color/white"/>
+
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        app:layout_constraintStart_toStartOf="@id/surface_view"
+        app:layout_constraintEnd_toEndOf="@id/surface_view"
+        app:layout_constraintTop_toTopOf="@id/surface_view"
+        app:layout_constraintBottom_toBottomOf="@id/surface_view"
+        android:background="@android:color/holo_red_dark"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
